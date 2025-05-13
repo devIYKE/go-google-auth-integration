@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ikechukwu Samuel Madu's Go Web Application with Google Sign-In
 
 This is a Go web application developed by Ikechukwu Samuel Madu that demonstrates how to integrate Google Sign-In authentication using OAuth 2.0.
@@ -97,3 +98,6 @@ The application will be available at [http://localhost:8080](http://localhost:80
 ## License
 
 MIT
+=======
+# go-google-auth-integration
+>>>>>>> eb03d7d9e4c31868a0db83ce60ccc67d684d4ada
