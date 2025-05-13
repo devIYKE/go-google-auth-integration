@@ -1,0 +1,298 @@
+/* Main Styles */
+:root {
+    --primary-color: #4285F4;
+    --secondary-color: #34A853;
+    --accent-color: #FBBC05;
+    --danger-color: #EA4335;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --grey-color: #e9ecef;
+    --personal-color: #6200EA; /* New personal brand color */
+}
+
+/* Custom banner for personal branding */
+.personal-banner {
+    background: linear-gradient(135deg, var(--primary-color), var(--personal-color));
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3367d6;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* Home Page */
+.home-container {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.info-section {
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.info-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Login Page */
+.login-container {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.google-btn {
+    width: 230px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.25);
+    display: flex;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.google-btn:hover {
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+.google-icon-wrapper {
+    width: 40px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.google-icon {
+    width: 22px;
+    height: 22px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=') no-repeat center;
+}
+
+.btn-text {
+    float: right;
+    color: #757575;
+    font-size: 14px;
+    padding: 11px;
+}
+
+/* Profile Page */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.profile-header {
+    display: flex;
+    padding: 20px;
+    background-color: var(--light-color);
+    align-items: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--grey-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.profile-name h2 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.profile-name p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.profile-details {
+    padding: 20px;
+}
+
+.profile-details h3 {
+    border-bottom: 1px solid var(--grey-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.profile-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-details td {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-details td:first-child {
+    font-weight: bold;
+    width: 150px;
+    color: #666;
+}
+
+.profile-actions {
+    padding: 20px;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+}
+
+footer p {
+    color: #777;
+}

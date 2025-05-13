@@ -1,0 +1,47 @@
+{{define "content"}}
+<div class="personal-banner">
+    Developed by Ikechukwu Samuel Madu - Google OAuth Integration
+</div>
+
+<div class="profile-container">
+    <h1>Welcome to Ikechukwu Samuel Madu's App - Your Profile</h1>
+    
+    <div class="profile-card">
+        <div class="profile-header">
+            <div class="profile-image">
+                {{if .Picture}}
+                <img src="{{.Picture}}" alt="Profile Picture">
+                {{else}}
+                <div class="no-image">No Image</div>
+                {{end}}
+            </div>
+            <div class="profile-name">
+                <h2>{{.Name}}</h2>
+                <p>{{.Email}}</p>
+            </div>
+        </div>
+        
+        <div class="profile-details">
+            <h3>Account Information</h3>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{.Name}}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{.Email}}</td>
+                </tr>
+                <tr>
+                    <td>Authentication:</td>
+                    <td>Google</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="profile-actions">
+            <a href="/logout" class="btn btn-danger">Sign Out</a>
+        </div>
+    </div>
+</div>
+{{end}}

@@ -1,0 +1,36 @@
+{{define "layout"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">Ikechukwu's Google Auth</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                {{if .Authenticated}}
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                {{else}}
+                    <li><a href="/login">Login</a></li>
+                {{end}}
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        {{template "content" .}}
+    </div>
+      <footer>
+        <p>&copy; {{.CurrentYear}} Ikechukwu Samuel Madu - Google Auth Example</p>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}

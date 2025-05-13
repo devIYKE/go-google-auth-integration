@@ -1,0 +1,28 @@
+{{define "content"}}
+<div class="personal-banner">
+    Developed by Ikechukwu Samuel Madu - Google OAuth Integration
+</div>
+
+<div class="home-container">
+    <h1>Welcome to Ikechukwu Samuel Madu's Google Auth App</h1>
+    
+    {{if .Authenticated}}
+        <p>Hello, {{.Name}}! You are logged in.</p>
+        <p><a href="/profile" class="btn">View Profile</a></p>
+    {{else}}
+        <p>This is a demo application developed by Ikechukwu Samuel Madu showing Google Sign-In integration with Go.</p>
+        <p><a href="/login" class="btn">Sign In with Google</a></p>
+    {{end}}
+    
+    <div class="info-section">
+        <h2>About This App</h2>
+        <p>This application demonstrates how to implement Google Sign-In authentication using:</p>
+        <ul>
+            <li>Go programming language</li>
+            <li>Gorilla Mux for routing</li>
+            <li>Gorilla Sessions for session management</li>
+            <li>Google OAuth2 API</li>
+        </ul>
+    </div>
+</div>
+{{end}}
